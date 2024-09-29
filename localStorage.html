@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <button id="btn">Store</button>
+    <button id="clear">Clear Data</button>
+    <script>
+        let btn=document.getElementById("btn");
+        let CLR=document.getElementById("clear");
+        btn.addEventListener("click",()=>{
+            localStorage.setItem("name","sushanth_reddy")
+        });
+        CLR.addEventListener("click",()=>{
+            localStorage.clear();
+        })
+    </script>
+</body>
+</html>
