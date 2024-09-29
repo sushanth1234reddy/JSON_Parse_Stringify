@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+</head>
+<body>
+    <button id="btn" style="position: fixed;" >Scroll</button>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus esse quas nostrum pariatur dicta vel distinctio explicabo necessitatibus, quidem officia ea quo nobis fugit. Ea culpa fugit voluptatem excepturi illo!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus delectus dignissimos unde distinctio quam esse minus quos totam deserunt ex libero enim iusto, deleniti id, harum cupiditate incidunt odit quibusdam.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique dolor unde earum minima facilis error facere, dolorem, obcaecati cumque reiciendis eaque deleniti tempora est minus, ipsum sequi soluta totam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perferendis ex quod amet iure deleniti totam similique eveniet iste minima, placeat dolores ea veniam quos atque, consequuntur enim quae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem repellendus recusandae eum incidunt consectetur, inventore iste, voluptas ad ullam, maxime eligendi sunt alias labore suscipit laboriosam quisquam consequatur id!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, exercitationem qui fugit impedit dolore nesciunt ipsum doloremque mollitia modi perspiciatis. Error eaque ipsam nam unde quia corporis illo dolorem totam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam aliquam accusamus debitis illum nostrum asperiores explicabo molestias ad eveniet magnam laboriosam vitae eius quas assumenda, voluptatibus omnis! Minima, iste.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et iusto exercitationem harum voluptas dolore, pariatur mollitia excepturi consequatur tenetur recusandae, ipsum fugit aperiam beatae nemo, quam laudantium? Unde, fugiat molestias?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iste numquam quod illo consequatur, sint assumenda laudantium ut incidunt at pariatur, asperiores tempora. Ea in natus voluptatum officia blanditiis. Illum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, corporis? Laborum repudiandae, totam quas odio nulla quisquam fugit sit id sequi vero qui reiciendis eveniet! Dignissimos reprehenderit eos maxime ipsam?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, ratione est enim deleniti, deserunt iusto consequuntur cumque voluptates voluptatem ut repellendus quis laborum placeat molestiae delectus ab quam nostrum quas.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quod soluta explicabo vero dolores. Quis unde aperiam debitis fugit nostrum possimus velit nisi, atque voluptatibus ducimus voluptate aut, sit adipisci.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quo quibusdam debitis cupiditate numquam illum saepe sit ad ipsam in quod odio fuga veniam recusandae, repudiandae repellendus mollitia deserunt molestias?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae exercitationem velit corrupti obcaecati excepturi, minus deleniti, nobis nam odio sint aliquid eum dolorum odit quam ea laborum asperiores, enim facilis.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem repellendus recusandae eum incidunt consectetur, inventore iste, voluptas ad ullam, maxime eligendi sunt alias labore suscipit laboriosam quisquam consequatur id!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, exercitationem qui fugit impedit dolore nesciunt ipsum doloremque mollitia modi perspiciatis. Error eaque ipsam nam unde quia corporis illo dolorem totam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam aliquam accusamus debitis illum nostrum asperiores explicabo molestias ad eveniet magnam laboriosam vitae eius quas assumenda, voluptatibus omnis! Minima, iste.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et iusto exercitationem harum voluptas dolore, pariatur mollitia excepturi consequatur tenetur recusandae, ipsum fugit aperiam beatae nemo, quam laudantium? Unde, fugiat molestias?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iste numquam quod illo consequatur, sint assumenda laudantium ut incidunt at pariatur, asperiores tempora. Ea in natus voluptatum officia blanditiis. Illum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, corporis? Laborum repudiandae, totam quas odio nulla quisquam fugit sit id sequi vero qui reiciendis eveniet! Dignissimos reprehenderit eos maxime ipsam?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, ratione est enim deleniti, deserunt iusto consequuntur cumque voluptates voluptatem ut repellendus quis laborum placeat molestiae delectus ab quam nostrum quas.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quod soluta explicabo vero dolores. Quis unde aperiam debitis fugit nostrum possimus velit nisi, atque voluptatibus ducimus voluptate aut, sit adipisci.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quo quibusdam debitis cupiditate numquam illum saepe sit ad ipsam in quod odio fuga veniam recusandae, repudiandae repellendus mollitia deserunt molestias?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae exercitationem velit corrupti obcaecati excepturi, minus deleniti, nobis nam odio sint aliquid eum dolorum odit quam ea laborum asperiores, enim facilis.
+   
+    </p>
+    <button id="btnup" >scroll UP</button>
+    <script>
+        let btn=document.getElementById("btn");
+        let btnup=document.getElementById("btnup");
+        let x=100;
+        btn.addEventListener("click",()=>{
+            window.scrollTo({top:x,behavior:"smooth"});
+            x+=200;
+        })
+        btnup.addEventListener("click",()=>{
+            window.scrollTo({top:0,behavior:"smooth"})
+        })
+    </script>
+</body>
+</html>
