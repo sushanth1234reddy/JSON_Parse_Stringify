@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Task</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Login Form</legend>
+        <form id="myform">
+        <label for="user">Username:</label>
+        <input type="text" id="username" placeholder="Enter Username">
+        <br><br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" placeholder="Enter Password">
+        <br><br>
+        <input type="submit">
+        </form>
+    </fieldset><br><br>
+    <div id="mydiv">
+    <button id="cleardata">cleardata</button>
+    <button id="show">Show Data</button>
+    <button id="exit" style="font-weight: bolder; background-color: black; color: whitesmoke;">X</button>
+    <p id="u"></p>
+    <p id="p"></p>
+    </div>
+    <script>
+          let myform=document.getElementById("myform");
+          myform.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let username=document.getElementById("username");
+            let pass=document.getElementById("pass");
+            
+            localStorage.setItem("Username",username.value);
+            localStorage.setItem("Password",pass.value);
+            
+            
+
+          });
+          let show=document.getElementById("show");
+          show.addEventListener("click",()=>{
+              let userOutPut=document.getElementById("u");
+              let passOutPut=document.getElementById("p");
+
+              let userN=localStorage.getItem("Username");
+              userOutPut.innerHTML=`Username: ${userN}`;
+
+              let passN=localStorage.getItem("Password");
+              passOutPut.innerHTML=`Password: ${passN}`;
+          });
+          let mydiv=document.getElementById("mydiv");
+          mydiv.style.border="2px solid black"
+          mydiv.style.padding="20px"
+
+          let cleardata=document.getElementById("cleardata");
+          cleardata.addEventListener("click",()=>{
+            localStorage.clear();
+          });
+          let exit=document.getElementById("exit");
+          exit.addEventListener("click",()=>{
+            mydiv.style.display="none";
+            
+          })
+    </script>
+</body>
+</html>
