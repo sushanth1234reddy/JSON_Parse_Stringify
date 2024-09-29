@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+        <label for="city">City:</label>
+        <input type="text" id="city"><br><br>
+        <input type="submit"><br><br><br>
+
+        <p id="disname"></p>
+        <p id="discity"></p>
+    </form>
+   <script>
+    let myform=document.getElementById("myform");
+    myform.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let name=document.getElementById("name");
+        let city=document.getElementById("city");
+
+        let OutObj={
+            "name":name.value,
+            "city":city.value
+        }
+
+        localStorage.setItem("userDetails",JSON.stringify(OutObj));
+
+        let result=JSON.parse(localStorage.getItem("userDetails"));
+        let disname=document.getElementById("disname");
+        let discity=document.getElementById("discity");
+
+        disname.innerHTML=result.name;
+        discity.innerHTML=result.city;
+    })
+   </script>
+</body>
+</html>
