@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Task</title>
+</head>
+<body>
+    <button id="insert">Insert Data</button>
+    <button id="CLR">Clear Data</button>
+    <script>
+        let insert=document.getElementById("insert");
+        let CLR=document.getElementById("CLR");
+        let names=["name1","name2","name3","name4","name5"];
+        let vals=["sushanth","vivek","akshay","vijay","hero"];
+        
+        insert.addEventListener("click",()=>{
+            let i=0;
+            while(i<=names.length){
+            localStorage.setItem(names[i],vals[i]);
+             i=i+1;
+            }
+        });
+        CLR.addEventListener("click",()=>{
+            localStorage.clear();
+        })
+    </script>
+</body>
+</html>
